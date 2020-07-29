@@ -1,5 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#info-container {
+    background-color: yellow;
+    color: blue;
+}
+
+/* Brock Loves KAiltlin */
+
 #container{
     width: 600px;
     height: 600px;
-    border: solid black 1px;
+    margin: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.black {
+    background-color: black;
 }
