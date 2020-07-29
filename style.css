@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
@@ -5,29 +8,105 @@ body {
     width: 100vw;
 }
 
+#text-wrap {
+    width: 70%;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 #wrapper {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    width: 100%;
     display: flex;
 }
 
-#info-container {
+#info-wrap {
+    width: 30%;
+    height: 100%;
     background-color: yellow;
     color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Brock Loves KAiltlin */
 
+#sketch-wrap {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 #container{
-    width: 600px;
-    height: 600px;
-    margin: 30px;
+    display: block;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    border: solid 30px red;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    background-color: #a9a6b6;
+    /* border: solid 0.1px; */
+    display: inline-block;
 }
 
 .row {
     display: flex;
 }
 
-.black {
-    background-color: black;
+#bottom {
+    width: 420px;
+    height: 40px;
+    border-radius: 0 0px 10px 10px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
 }
+
+.knob {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 3px 3px 3px grey ;
+}
+
+button {
+    margin: 10px;
+    width: 7em;
+    border: none;
+    background-color: blue;
+    color: white;
+    box-shadow: 8px 8px 2px white ;
+
+}
+
+button:hover {
+    box-shadow: 6px 6px 2px white ;
+    transform: translateY(2px);
+    background-color: #5b5bff;
+}
+button:active{
+    transform: translateY(4px);
+    box-shadow: 2px 2px 2px white ;
+}
+
+

@@ -2,17 +2,15 @@
 const container = document.querySelector('#container') 
 
  function createGrid(x) {
-    let size = 600/x //size of boxes
+    let size = (400/x) //size of boxes
 
      for(let rows = 0; rows < x; rows++){
         var row = document.createElement("div")
         row.classList.add('row')
-        row.style.display = 'flex'
          for(let columns = 0; columns < x; columns++){
             let div = document.createElement("div")
             window.div2 = div
             div.classList.add('grid')
-            div.style.border = 'solid'
             div.style.width = size +'px'
             div.style.height = size +'px'
             row.appendChild(div)
@@ -27,7 +25,7 @@ const container = document.querySelector('#container')
 
  function clearGrid() {
     const allBoxes = document.querySelectorAll('.grid');
-    allBoxes.forEach(item => item.style.backgroundColor = 'white')
+    allBoxes.forEach(item => item.style.backgroundColor = '#9f9daf')
  }
 
 
