@@ -31,15 +31,16 @@ const container = document.querySelector('#container')
 
 
  function boxSizing() {
-     var newGridSize = prompt("How big should the new grid be?");
-     if (newGridSize != null) {
-         container.querySelectorAll('*').forEach(item => item.remove())
-         clearGrid()
-         createGrid(newGridSize)
-         addEventListeners()
-     }
+     var newGridSize = prompt("Enter a number between 1 and 100");
+     if (newGridSize != null && newGridSize > 0 && newGridSize < 100) {
+         container.querySelectorAll('*').forEach(item => item.remove(),
+         clearGrid(),
+         createGrid(newGridSize),
+         addEventListeners()) } else {
+            alert('Error. Please enter a valid number.')
+         } 
      
- }
+     }
 
  function addEventListeners() {
      const allBoxes = document.querySelectorAll('.grid');
