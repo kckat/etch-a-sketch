@@ -23,6 +23,11 @@ const container = document.querySelector('#container')
      this.style.backgroundColor = 'black'
  }
 
+function randomNum (){
+    return Math.floor(Math.random() * 256)
+}
+
+
  function clearGrid() {
     const allBoxes = document.querySelectorAll('.grid');
     allBoxes.forEach(item => item.style.backgroundColor = '#9f9daf')
@@ -32,7 +37,7 @@ const container = document.querySelector('#container')
 
  function boxSizing() {
      var newGridSize = prompt("Enter a number between 1 and 100");
-     if (newGridSize != null && newGridSize > 0 && newGridSize < 100) {
+     if (newGridSize != null && newGridSize > 0 && newGridSize <= 100) {
          container.querySelectorAll('*').forEach(item => item.remove(),
          clearGrid(),
          createGrid(newGridSize),
@@ -45,6 +50,12 @@ const container = document.querySelector('#container')
  function addEventListeners() {
      const allBoxes = document.querySelectorAll('.grid');
      allBoxes.forEach(item => item.addEventListener('mouseenter', fillBox))
+ }
+
+ function fillRainbow() {
+     clearGrid()
+     const allBoxes = document.querySelectorAll('.grid');
+     allBoxes.forEach(item => item.addEventListener('mouseenter', fillRainbow))
  }
 
   gridSize = 16
